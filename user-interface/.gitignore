@@ -1,0 +1,5 @@
+myenv/
+.vscode
+*.pt
+*.pyc
+static/*.png

@@ -1,0 +1,18 @@
+services:
+  yolov5:
+    build: ./yolov5-flask
+    networks:
+      - app-network
+    ports:
+      - "5000:5000"
+  
+  userv5:
+    build: ./user-interface
+    networks:
+      - app-network
+    ports:
+      - "5001:5001"
+
+networks:
+  app-network:
+    driver: bridge
